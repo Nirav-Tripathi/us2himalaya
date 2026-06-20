@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US2HIMALAYAS | Travel Company</title>
+
+<link rel="icon" type="image/png" href="logo.png">
+
+<link rel="preconnect" href="https://us2himalayas.base44.app">
+
+<style>
+html, body {
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+background: #0a0a0a;
+}
+
+#loader {
+position: absolute;
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+color: white;
+font-family: Arial, sans-serif;
+background: #0a0a0a;
+z-index: 2;
+}
+
+.spinner {
+width: 50px;
+height: 50px;
+border: 4px solid rgba(255,255,255,0.2);
+border-top: 4px solid #FF6D4D;
+border-radius: 50%;
+animation: spin 1s linear infinite;
+margin-bottom: 15px;
+}
+
+@keyframes spin {
+to { transform: rotate(360deg); }
+}
+
+iframe {
+position: absolute;
+width: 100%;
+height: 100%;
+border: none;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+</style>
+</head>
+
+<body>
+
+<div id="loader">
+<div class="spinner"></div>
+<div>Loading US2HIMALAYAS...</div>
+</div>
+
+<iframe id="frame" src="https://us2himalayas.base44.app/?hide_badge=true"></iframe>
+
+<script>
+const frame = document.getElementById("frame");
+const loader = document.getElementById("loader");
+
+frame.onload = function () {
+loader.style.display = "none";
+frame.style.opacity = "1";
+};
+</script>
+
+</body>
+</html>
