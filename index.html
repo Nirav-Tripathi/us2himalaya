@@ -59,23 +59,6 @@ transition: opacity 0.3s ease;
 </head>
 
 <body>
-
-<div id="loader">
-<div class="spinner"></div>
-<div>Loading US2HIMALAYAS...</div>
-</div>
-
 <iframe id="frame" src="https://us2himalayas.base44.app/?hide_badge=true"></iframe>
-
-<script>
-const frame = document.getElementById("frame");
-const loader = document.getElementById("loader");
-
-frame.onload = function () {
-loader.style.display = "none";
-frame.style.opacity = "1";
-};
-</script>
-
 </body>
 </html>
